@@ -11,9 +11,9 @@ $db = "bddiseñoweb";
 $conexion = new mysqli($server, $user, $pass, $db);
 //comprobamos si nos conectamos 
 if($conexion->connect_error){
-    die (" conexion fallida" . $conexion->connect_error);
+    //die (" conexion fallida" . $conexion->connect_error);
 } else{
-    echo"conectado";
+   // echo"conectado";
 }
 
 //linea de codigo para que me acepte los caracteres especiales 

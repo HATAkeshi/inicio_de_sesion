@@ -27,7 +27,7 @@
         <div class="col col-md-6 bg"></div>
         <div class="col-md-6 ">
             <!--comenzamos con el formulario-->
-            <form class="row g-3 needs-validation" novalidate>
+            <form class="row g-3 needs-validation" novalidate action="bd/registroClientes.php" method="post">
                 <!--logo de la empresa-->
               <div class="text-end text-center ">
                 <img src="logos/logo.png" width="48" alt="">
@@ -35,8 +35,8 @@
               <h2 class="fw-bold text-center py-5">Welcome to MangaKase</h2>
               <!--Nombre de la persona-->
                 <div class="col-md-6">
-                    <label for="validationServer01" class="form-label">Nombre</label>
-                    <input type="text" class="form-control" id="validationServer01" placeholder="Mark" required>
+                    <label for="Nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="Nombre" name="Nombre" placeholder="Mark" required>
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
@@ -46,8 +46,8 @@
                 </div>
                 <!--Apellidos de la persona-->
                 <div class="col-md-6">
-                    <label for="validationServer02" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="validationServer02" placeholder="Otto" required>
+                    <label for="Apellidos" class="form-label">Apellidos</label>
+                    <input type="text" class="form-control" id="Apellidos" name="Apellidos" placeholder="Otto" required>
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
@@ -57,10 +57,10 @@
                 </div>
                 <!--E-mail de la persona-->
                 <div class="col-md-8">
-                    <label for="validationServerUsername" class="form-label">E-mail</label>
+                    <label for="Correo" class="form-label">E-mail</label>
                     <div class="input-group has-validation">
-                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                    <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    <span class="input-group-text" id="Correo">@</span>
+                    <input type="text" class="form-control" id="Correo" name="Correo" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
@@ -73,10 +73,10 @@
                 <!--pass de la persona-->
                 <div class="row g-3 align-items-center col-md-12">
                     <div class="col-auto">
-                        <label for="inputPassword6" class="col-form-label">Password</label>
+                        <label for="Contraseña" class="col-form-label">Password</label>
                     </div>
                     <div class="col-auto">
-                        <input type="password" id="inputPassword6" class="form-control " aria-describedby="passwordHelpInline" 
+                        <input type="password" id="Contraseña" name="Contraseña" class="form-control " aria-describedby="passwordHelpInline" 
                          required>
                     </div>
                     <div class="col-auto">
@@ -93,8 +93,8 @@
                 </div>
                 <!--ciudad de la persona-->
                 <div class="col-md-6">
-                    <label for="validationServer03" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                    <label for="Ciudad" class="form-label">Ciudad</label>
+                    <input type="text" class="form-control" id="Ciudad" name="Ciudad" aria-describedby="validationServer03Feedback" required>
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
@@ -104,8 +104,8 @@
                 </div>
                 <!--Genero de la persona-->
                 <div class="col-md-6">
-                    <label for="validationServer04" class="form-label">Genero</label>
-                    <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                    <label for="Genero" class="form-label">Genero</label>
+                    <select class="form-select" id="Genero" name="Genero" aria-describedby="validationServer04Feedback" required>
                     <option>Masculino</option>
                     <option>Femenino</option>
                     <option>Helicoptero Apache Ruso</option>
@@ -119,8 +119,8 @@
                 </div>
                 <!--Numero de la persona-->
                 <div class="col-md-6">
-                    <label for="validationServer05" class="form-label">Numero</label>
-                    <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                    <label for="Numero" class="form-label">Numero</label>
+                    <input type="text" class="form-control" id="Numero" name="Numero" aria-describedby="validationServer05Feedback" required>
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
