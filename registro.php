@@ -57,10 +57,10 @@
                 </div>
                 <!--E-mail de la persona-->
                 <div class="col-md-8">
-                    <label for="Correo" class="form-label">E-mail</label>
+                    <label for="Corrreo" class="form-label">E-mail</label>
                     <div class="input-group has-validation">
-                    <span class="input-group-text" id="Correo">@</span>
-                    <input type="text" class="form-control" id="Correo" name="Correo" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    <span class="input-group-text" id="Corrreo">@</span>
+                    <input type="text" class="form-control" id="Correo" name="Corrreo" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
