@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>Formulario de Registro</title>
     <!--llamado a bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -26,7 +27,7 @@
         <div class="col col-md-6 bg"></div>
         <div class="col-md-6 ">
             <!--comenzamos con el formulario-->
-            <form class="row g-3">
+            <form class="row g-3 needs-validation" novalidate>
                 <!--logo de la empresa-->
               <div class="text-end text-center ">
                 <img src="logos/logo.png" width="48" alt="">
@@ -35,17 +36,23 @@
               <!--Nombre de la persona-->
                 <div class="col-md-6">
                     <label for="validationServer01" class="form-label">Nombre</label>
-                    <input type="text" class="form-control is-valid" id="validationServer01" placeholder="Mark" required>
+                    <input type="text" class="form-control" id="validationServer01" placeholder="Mark" required>
                     <div class="valid-feedback">
-                    Looks good!
+                    Todo Bien!
+                    </div>
+                    <div class="invalid-feedback">
+                    Deve de ingresar su nombre
                     </div>
                 </div>
                 <!--Apellidos de la persona-->
                 <div class="col-md-6">
                     <label for="validationServer02" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control is-valid" id="validationServer02" placeholder="Otto" required>
+                    <input type="text" class="form-control" id="validationServer02" placeholder="Otto" required>
                     <div class="valid-feedback">
-                    Looks good!
+                    Todo Bien!
+                    </div>
+                    <div class="invalid-feedback">
+                    Deve de ingresar su Apellido
                     </div>
                 </div>
                 <!--E-mail de la persona-->
@@ -53,7 +60,10 @@
                     <label for="validationServerUsername" class="form-label">E-mail</label>
                     <div class="input-group has-validation">
                     <span class="input-group-text" id="inputGroupPrepend3">@</span>
-                    <input type="text" class="form-control is-invalid" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    <input type="text" class="form-control" id="validationServerUsername" aria-describedby="inputGroupPrepend3 validationServerUsernameFeedback" required>
+                    <div class="valid-feedback">
+                    Todo Bien!
+                    </div>
                     <div id="validationServerUsernameFeedback" class="invalid-feedback">
                         Por favor ingrese su correo
                     </div>
@@ -66,12 +76,16 @@
                         <label for="inputPassword6" class="col-form-label">Password</label>
                     </div>
                     <div class="col-auto">
-                        <input type="password" id="inputPassword6" class="form-control is-invalid" aria-describedby="passwordHelpInline" required>
+                        <input type="password" id="inputPassword6" class="form-control " aria-describedby="passwordHelpInline" 
+                         required>
                     </div>
                     <div class="col-auto">
                         <span id="passwordHelpInline" class="form-text">
                         Ingrese caracteres mayores a 8 - 20
                         </span>
+                    </div>
+                    <div class="valid-feedback">
+                    Todo Bien!
                     </div>
                     <div class="invalid-feedback">
                         Must be 8-20 characters long.
@@ -80,7 +94,10 @@
                 <!--ciudad de la persona-->
                 <div class="col-md-6">
                     <label for="validationServer03" class="form-label">Ciudad</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                    <input type="text" class="form-control" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+                    <div class="valid-feedback">
+                    Todo Bien!
+                    </div>
                     <div id="validationServer03Feedback" class="invalid-feedback">
                     Por favor inserte su ciudad
                     </div>
@@ -88,11 +105,14 @@
                 <!--Genero de la persona-->
                 <div class="col-md-6">
                     <label for="validationServer04" class="form-label">Genero</label>
-                    <select class="form-select is-invalid" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+                    <select class="form-select" id="validationServer04" aria-describedby="validationServer04Feedback" required>
                     <option>Masculino</option>
                     <option>Femenino</option>
                     <option>Helicoptero Apache Ruso</option>
                     </select>
+                    <div class="valid-feedback">
+                    Todo Bien!
+                    </div>
                     <div id="validationServer04Feedback" class="invalid-feedback">
                     Por favor seleccione su genero
                     </div>
@@ -100,7 +120,10 @@
                 <!--Numero de la persona-->
                 <div class="col-md-6">
                     <label for="validationServer05" class="form-label">Numero</label>
-                    <input type="text" class="form-control is-invalid" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                    <input type="text" class="form-control" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+                    <div class="valid-feedback">
+                    Todo Bien!
+                    </div>
                     <div id="validationServer05Feedback" class="invalid-feedback">
                     Por favor ingrese su numero
                     </div>
@@ -108,10 +131,13 @@
                 <!--Terminos y condiciones -->
                 <div class="col-12">
                     <div class="form-check">
-                    <input class="form-check-input is-invalid" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck3" aria-describedby="invalidCheck3Feedback" required>
                     <label class="form-check-label" for="invalidCheck3">
                         Acepto los terminos y condiciones
                     </label>
+                    <div class="valid-feedback">
+                    Todo Bien!
+                    </div>
                     <div id="invalidCheck3Feedback" class="invalid-feedback">
                         Acepte para continuar 
                     </div>
@@ -150,6 +176,28 @@
         </div>
     </div>
     </footer>
+    <!--Scrip para que me funcione las validaciones del formulario-->
+    <script>
+            (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+                })
+            })()
+    </script>
 <!--fin de footer-->
     <!--comection to js for bootstrap-->
   <script src="js/bootstrap.bundle.min.js"></script>
