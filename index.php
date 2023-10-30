@@ -7,7 +7,7 @@
     <!--llamado a bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--llamdo a sweetAlert-->
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="SweetAlert/sweetalert2.min.css">
     <!--Agregando la imagen de la izquierda-->
     <style>
       .bg{
@@ -20,13 +20,13 @@
 </head>
 <body class="bg-dark text-light">
    <!--hacemos las rows-->
-    <div class="container" >
+    <div class="container mb-5" >
       <div class="row aling-items-center mt-4 ">
         <!--columna que contiene la imagen-->
         <div class="col col-md-6 bg"></div>
         <div class="col-md-6 ">
             <!--comenzamos con el formulario-->
-            <form >
+            <form action="" method="post">
               <!--logo de la empresa-->
               <div class="text-end text-center ">
                 <img src="logos/logo.png" width="48" alt="">
@@ -56,11 +56,11 @@
               </div>
               <!--por si no tiene cuenta-->
               <div class="my-3">
-                <span>No tienes cuenta? <a href="#">Registrate</a> </span><br>
+                <span>No tienes cuenta? <a href="registro.php">Registrate</a> </span><br>
                 <!--si olvida la contraseña-->
                 <span> <a href="#">Olvide mi contraseña</a> </span>
               </div>
-            </form>
+            </form action="" method="post" id="formRegistro">
             <!--fin del formulario-->
 
             <!--login con redes sociales-->
@@ -101,7 +101,7 @@
                       </button>
                   </div>
                   <!--Fin del boton de google-->
-                  
+
                 </div>
               </div>
             </div>
@@ -109,7 +109,42 @@
         </div>
       </div>
     </div>
-    <!--comection to js-->
+<hr>
+  <!--pie de pagina-->
+    <footer>
+    <div class="container mt-5">
+        <div class="row ">
+        <div class="col-lg-4">
+            <h3>Enlaces</h3>
+            <ul>
+            <li><a href="index.php">Inicio</a></li>
+            <li><a href="#">Acerca de</a></li>
+            <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-4">
+            <h3>Contacto</h3>
+            <p>Correo electrónico: for.all.today123@gmail.com</p>
+            <p>Teléfono: +591 79123133</p>
+        </div>
+        <div class="col-lg-4">
+            <h3>Derechos de autor</h3>
+            <p>(c) 2023 MangaKase. Todos los derechos reservados.</p>
+        </div>
+        </div>
+    </div>
+    </footer>
+<!--fin de footer-->
+
+    <!--comection to js for bootstrap-->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <!--conection to js for JQuery-->
+  <script src="jQuery/jquery-3.7.1.min.js"></script>
+  <!--conecction to js for pooper-->
+  <script src="pooper/popper.min.js"></script>
+  <!--conecction to js for SweetAlert-->
+  <script src="SweetAlert/sweetalert2.all.min.js"></script>
+  <!--conection a my js-->
+  <script src="codigo.js"></script>
 </body>
 </html>
