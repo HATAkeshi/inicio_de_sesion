@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <!--llamdo a sweetAlert-->
     <link rel="stylesheet" href="SweetAlert/sweetalert2.min.css">
+    <!--Colocando el icono de la pagina-->
+    <link rel="icon" href="imagenes_de_apoyo/iconnn.ico" type="imagenes_de_apoyo/iconnn.ico" title="Icono de la pagina">
     <!--Agregando la imagen de la izquierda-->
     <style>
       .bg{
@@ -128,6 +130,17 @@
                     Por favor ingrese su numero
                     </div>
                 </div>
+                <!--Numero de la empresa de la persona-->
+                <div class="col-md-6">
+                    <label for="Empresa" class="form-label">Empresa</label>
+                    <input type="text" class="form-control" id="Numero" name="Empresa" aria-describedby="validationServer05Feedback" required>
+                    <div class="valid-feedback">
+                    Todo Bien!
+                    </div>
+                    <div id="validationServer05Feedback" class="invalid-feedback">
+                    Por favor ingrese su Empresa
+                    </div>
+                </div>
                 <!--Terminos y condiciones -->
                 <div class="col-12">
                     <div class="form-check">
@@ -143,6 +156,7 @@
                     </div>
                     </div>
                 </div>
+                <!--boton de enciar registro-->
                 <div class="col-12">
                     <button class="btn btn-primary w-50" type="submit">Registrarse</button>
                 </div>
