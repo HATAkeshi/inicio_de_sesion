@@ -18,12 +18,14 @@ $ejecutando = mysqli_query($conexion, $insertarUsuario);
 if($ejecutando == 1){
     $insertarTelefonos = "INSERT INTO telefonos (Numero, Empresa) VALUES ('$Numero', '$Empresa')";
     $ejecutando2 = mysqli_query($conexion, $insertarTelefonos);
-}
-//comprobamos la imformacion
-if ($conexion -> query($insertarUsuario) == true){
-    header('location: ../registro.php');
+    if($ejecutando2){
+        header('location: ../registro.php');
+    }else{
+        echo"No se guardaron los datos del telefono";
+    }
 }else{
-    echo "No se guardo la informacion";
+    echo"El cliente ya exixte";
 }
+
 $conexion -> close();
 ?>
