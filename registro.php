@@ -7,6 +7,7 @@
     <title>Formulario de Registro</title>
     <!--llamado a bootstrap-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <!--llamdo a sweetAlert-->
     <link rel="stylesheet" href="SweetAlert/sweetalert2.min.css">
     <!--Colocando el icono de la pagina-->
@@ -29,7 +30,7 @@
         <div class="col col-md-6 bg"></div>
         <div class="col-md-6 ">
             <!--comenzamos con el formulario-->
-            <form class="row g-3 needs-validation" novalidate action="bd/registroClientes.php" method="post">
+            <form class="row g-3 needs-validation" novalidate action="bd/registroClientes.php" method="post" id="form">
                 <!--logo de la empresa-->
               <div class="text-end text-center ">
                 <img src="logos/logo.png" width="48" alt="">
@@ -94,7 +95,7 @@
                     </div>
                 </div>
                 <!--ciudad de la persona-->
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <label for="Ciudad" class="form-label">Ciudad</label>
                     <input type="text" class="form-control" id="Ciudad" name="Ciudad" aria-describedby="validationServer03Feedback" required>
                     <div class="valid-feedback">
@@ -105,7 +106,7 @@
                     </div>
                 </div>
                 <!--Genero de la persona-->
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <label for="Genero" class="form-label">Genero</label>
                     <select class="form-select" id="Genero" name="Genero" aria-describedby="validationServer04Feedback" required>
                     <option>Masculino</option>
@@ -119,28 +120,48 @@
                     Por favor seleccione su genero
                     </div>
                 </div>
-                <!--Numero de la persona-->
-                <div class="col-md-6">
-                    <label for="Numero" class="form-label">Numero</label>
-                    <input type="text" class="form-control" id="Numero" name="Numero" aria-describedby="validationServer05Feedback" required>
+                <!--Edad de la persona-->
+                <div class="col-md-2">
+                    <label for="Age" class="form-label">Edad</label>
+                    <input type="text" class="form-control" id="Age" name="Age" aria-describedby="validationServer05Feedback" required placeholder="20">
                     <div class="valid-feedback">
                     Todo Bien!
                     </div>
                     <div id="validationServer05Feedback" class="invalid-feedback">
-                    Por favor ingrese su numero
+                    Por favor ingrese su Edad
                     </div>
                 </div>
-                <!--Numero de la empresa de la persona-->
-                <div class="col-md-6">
-                    <label for="Empresa" class="form-label">Empresa</label>
-                    <input type="text" class="form-control" id="Numero" name="Empresa" aria-describedby="validationServer05Feedback" required>
-                    <div class="valid-feedback">
-                    Todo Bien!
+                <!--form group-->
+                <div class="form-group row mt-2" id="all">
+                    <!--Numero de la persona-->
+                    <div class="col-md-5">
+                        <label for="Numero" class="form-label">Numero</label>
+                        <input type="text" class="form-control" id="Numero" name="Numero" aria-describedby="validationServer05Feedback" required placeholder="79123133">
+                        <div class="valid-feedback">
+                        Todo Bien!
+                        </div>
+                        <div id="validationServer05Feedback" class="invalid-feedback">
+                        Por favor ingrese su numero
+                        </div>
                     </div>
-                    <div id="validationServer05Feedback" class="invalid-feedback">
-                    Por favor ingrese su Empresa
+                    <!--Numero de la empresa de la persona-->
+                    <div class="col-md-5">
+                        <label for="Empresa" class="form-label">Empresa</label>
+                        <input type="text" class="form-control" id="Empresa" name="Empresa" aria-describedby="validationServer05Feedback" required placeholder="Viva">
+                        <div class="valid-feedback">
+                        Todo Bien!
+                        </div>
+                        <div id="validationServer05Feedback" class="invalid-feedback">
+                        Por favor ingrese su Empresa
+                        </div>
+                    </div>
+                    <!--boton de añadir numero-->
+                    <div class="col-md-2">
+                        <label for="add" class="form-label">Añadir</label>
+                        <button class="btn btn-secondary" onclick="" id="add">Numeros</button>
                     </div>
                 </div>
+                
                 <!--Terminos y condiciones -->
                 <div class="col-12">
                     <div class="form-check">
@@ -156,9 +177,12 @@
                     </div>
                     </div>
                 </div>
-                <!--boton de enciar registro-->
-                <div class="col-12">
-                    <button class="btn btn-primary w-50" type="submit">Registrarse</button>
+                <!--boton de enviar registro-->
+                <div class="d-grid col-6">
+                    <button class="btn btn-primary " type="submit">Registrarse</button>
+                </div>
+                <div class="d-grid col-md-6">
+                    <a href="dashboard.php" class="btn btn-secondary ">Ir a Base de datos</a>
                 </div>
                 </form>
             <!--fin del formulario-->
@@ -215,6 +239,8 @@
 <!--fin de footer-->
     <!--comection to js for bootstrap-->
   <script src="js/bootstrap.bundle.min.js"></script>
+  <!--nuestro js-->
+  <script src="js/funciones.js"></script>
   <!--conection to js for JQuery-->
   <script src="jQuery/jquery-3.7.1.min.js"></script>
   <!--conecction to js for pooper-->
